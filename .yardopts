@@ -1,0 +1,3 @@
+--title 'Auto Deploy Test'
+--output-dir api-docs
+lib/**/*.rb
