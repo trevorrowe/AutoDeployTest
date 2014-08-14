@@ -1,3 +1,1 @@
-class AutoDeployTest
-  VERSION = '0.1.0'
-end
+require 'auto_deploy_test/version'
