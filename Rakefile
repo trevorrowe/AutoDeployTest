@@ -6,4 +6,6 @@ Dir[File.join(root, 'tasks', '**', '*.rake')].each do |task_file|
   load task_file
 end
 
-task :default => :test
+task :default => %w(test)
+
+task :build => %w(test docs)
