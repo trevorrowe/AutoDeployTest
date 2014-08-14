@@ -10,7 +10,7 @@ namespace :docs do
 
   desc "Generates api-docs.tgz"
   task :zip do
-    sh "tar czvf api-docs.tgz api-docs/"
+    sh "tar czf api-docs.tgz api-docs/"
   end
 
 end
