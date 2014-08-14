@@ -23,4 +23,4 @@ namespace :release do
 end
 
 desc "Releases a new version"
-task :release => [:tag, :push]
+task :release => %w(test release:tag release:push)
