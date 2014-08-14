@@ -8,4 +8,4 @@ end
 
 task :default => %w(test)
 
-task :build => %w(test docs)
+task :build => %w(test gem:build docs)
