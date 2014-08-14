@@ -1,8 +1,15 @@
 script: bundle exec rake build
-
 rvm:
 - 1.9.3
 - 2.0.0
 - 2.1.2
 - jruby
-
+deploy:
+  - provider: rubygems
+    gem: auto-deploy-test
+    skip_cleanup: true
+    api_key:
+      secure: nc2t9oY2+Fa3HHx/dm9sO9G3IwsUO+u0MfEdGBvkJyBpoQ7bTzim3huxWwCues3Mg99wXGytbRuWs8xKIaF4khBIkhRv0dNCGCy4bQH4fXKKjfYviv+DBcj4qbd6K6Ec9i4v7hV9Vj2WeEj1+Gl0OPVI1H2H521s2hHbZlAq0H0=
+    on:
+      branch: master
+      tags: true
