@@ -1,11 +1,19 @@
+def version
+  version = ENV['VERSION'].to_s.sub(/^v/, '')
+  if version.empty?
+    warn("usage: VERSION=x.y.z rake release:tag")
+    exit
+  end
+  version
+end
+
 namespace :release do
 
+  task :require_version do
+    version
+  end
+
   task :tag do
-    version = ENV['VERSION'].to_s.sub(/^v/, '')
-    if version.empty?
-      warn("usage: VERSION=x.y.z rake release:tag")
-      exit
-    end
     path = 'lib/auto_deploy_test/version.rb'
     file = File.read(path)
     file = file.gsub(/VERSION = '.+?'/, "VERSION = '#{version}'")
@@ -22,4 +30,4 @@ namespace :release do
 end
 
 desc "Releases a new version"
-task :release => %w(test release:tag release:push)
+task :release => %w(release:require_version test release:tag release:push)
