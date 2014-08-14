@@ -1,3 +1,4 @@
 --title 'Auto Deploy Test'
 --output-dir api-docs
+--markup-provider rdiscount
 lib/**/*.rb
