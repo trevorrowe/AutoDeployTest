@@ -16,8 +16,7 @@ namespace :release do
   end
 
   task :push do
-    sh("git push origin")
-    sh("git push origin --tags")
+    sh("git push origin --follow-tags")
   end
 
 end
