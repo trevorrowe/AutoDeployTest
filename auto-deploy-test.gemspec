@@ -1,7 +1,7 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'auto-deploy-test'
+require 'auto_deploy_test/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'auto-deploy-test'

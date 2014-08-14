@@ -3,3 +3,4 @@ Gemfile.lock
 .yardoc
 api-docs
 api-docs.tgz
+coverage
