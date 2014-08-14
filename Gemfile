@@ -10,5 +10,5 @@ end
 
 group :docs do
   gem 'yard'
-  gem 'rdiscount'
+  gem 'kramdown'
 end

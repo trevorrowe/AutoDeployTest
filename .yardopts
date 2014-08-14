@@ -1,4 +1,5 @@
 --title 'Auto Deploy Test'
 --output-dir api-docs
---markup-provider rdiscount
+--markup markdown
+--markup-provider kramdown
 lib/**/*.rb
