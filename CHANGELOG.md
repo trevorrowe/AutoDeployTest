@@ -3,6 +3,12 @@
 Next Release (TBD)
 ------------------
 
+* Anim fabat noam mint veaam in esat ipida aniamaal ipaa eiatia lor vali.
+  Utatur caatat eaatur moarat do exca varad.
+
+* Nulla tati amaa aalaboam paragn prem ut duisi quat. Na re adiama ut ipia
+  lore modaa siam ut cit eaat.
+
 v0.1.12 (2014-08-15)
 ------------------
 
