@@ -13,6 +13,13 @@ namespace :release do
     version
   end
 
+  task :require_clean do
+    unless `git diff --shortstat 2> /dev/null | tail -n1` == ''
+      warn('workspace must be clean to release')
+      exit(1)
+    end
+  end
+
   task :tag do
     path = 'lib/auto_deploy_test/version.rb'
     file = File.read(path)
