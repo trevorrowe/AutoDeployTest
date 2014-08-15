@@ -3,6 +3,12 @@
 Next Release (TBD)
 ------------------
 
+* Laaua esat in uaatu serci oatur seqa elia amet naat quaa inia incia tate.
+  Ipsu ana exali doad la quis.
+
+* Deaabor dunt am daat uatua dolo moamc la caec labo labor dolore. Ina sia pa
+  elit utat quaal noan do.
+
 v0.1.10 (2014-08-15)
 ------------------
 

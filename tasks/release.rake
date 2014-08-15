@@ -44,5 +44,5 @@ task :release => [
   'test',
   'changelog:version',
   'release:tag',
-  #'release:push',
+  'release:push',
 ]
