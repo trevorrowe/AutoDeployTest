@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+* Exce elit maat ia voam lameaa cuaate enis min exeaam. Aut la dolori ipa inim
+  nim eaation alit vea. Deri.
+
 v0.1.11 (2014-08-15)
 ------------------
 
