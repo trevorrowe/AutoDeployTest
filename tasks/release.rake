@@ -27,7 +27,16 @@ namespace :release do
     File.open(path, 'w') { |f| f.write(file) }
     sh("git add lib/auto_deploy_test/version.rb")
     sh("git commit -m \"Tag release v#{version}\"")
-    sh("git tag -a v#{version} -m \"See ...\"")
+
+    date = Time.now.strftime('%Y-%m-%d')
+    out = `git log $(git describe --tags --abbrev=0)...HEAD -E --grep '#[0-9]+' 2>/dev/null`
+    issues = out.scan(/((?:\S+\/\S+)?#\d+)/).flatten
+    if issues.count > 0
+      sh("git tag -a v#{version} -m \"(#{date})\n\nSee ...\"")
+    else
+      sh("git tag -a v#{version} -m \"(#{date})\"")
+    end
+
   end
 
   task :push do
@@ -44,5 +53,5 @@ task :release => [
   'test',
   'changelog:version',
   'release:tag',
-  'release:push',
+  #'release:push',
 ]
