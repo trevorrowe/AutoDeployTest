@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+v0.1.11 (2014-08-15)
+------------------
+
 * Laaua esat in uaatu serci oatur seqa elia amet naat quaa inia incia tate.
   Ipsu ana exali doad la quis.
 
