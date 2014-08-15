@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+v0.1.7 (2014-08-14)
+------------------
+
 * Irad aliq auta ina dess deaat ip adaa et inia magn. Cona veaaam aliq sua
   exea ut ad cua doabor.
 
