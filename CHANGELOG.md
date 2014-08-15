@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+v0.1.13 (2014-08-15)
+------------------
+
 * Auteaab iaat ip nonsea ipis eu datea. Laboanim pari etata eiam voloal fadat
   dolor tat maadatu dunt salit in. Uat.
 
