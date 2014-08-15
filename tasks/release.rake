@@ -9,11 +9,11 @@ end
 
 namespace :release do
 
-  task :require_version do
+  task :check_version do
     version
   end
 
-  task :require_clean do
+  task :check_clean do
     unless `git diff --shortstat 2> /dev/null | tail -n1` == ''
       warn('workspace must be clean to release')
       exit(1)
@@ -27,7 +27,7 @@ namespace :release do
     File.open(path, 'w') { |f| f.write(file) }
     sh("git add lib/auto_deploy_test/version.rb")
     sh("git commit -m \"Tag release v#{version}\"")
-    sh("git tag v#{version}")
+    sh("git tag -a v#{version} -m \"See ...\"")
   end
 
   task :push do
@@ -39,9 +39,10 @@ end
 
 desc "Releases a new version"
 task :release => [
-  'release:require_version',
+  'release:check_version',
+  'release:check_clean',
   'test',
   'changelog:version',
   'release:tag',
-  'release:push',
+  #'release:push',
 ]

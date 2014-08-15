@@ -23,4 +23,17 @@ namespace :changelog do
     sh("git add CHANGELOG.md")
   end
 
+  task :latest do
+    changelog = File.open('CHANGELOG.md', 'r', encoding: 'UTF-8') { |f| f.read }
+    lines = []
+    changelog.lines[8..-1].each do |line|
+      if line.match(/^v\d/)
+        break
+      else
+        lines << line
+      end
+    end
+    puts lines[0..-2].join
+  end
+
 end

@@ -28,3 +28,6 @@ deploy:
       repo: trevorrowe/AutoDeployTest
       all_branches: true
       tags: true
+
+after_deploy:
+  "rake changelog:latest"
