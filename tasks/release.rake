@@ -26,16 +26,15 @@ namespace :release do
     file = file.gsub(/VERSION = '.+?'/, "VERSION = '#{version}'")
     File.open(path, 'w') { |f| f.write(file) }
     sh("git add lib/auto_deploy_test/version.rb")
-    sh("git commit -m \"Tag release v#{version}\"")
+    sh("git commit -m \"$(rake release:tag_message)\"")
+  end
 
-    date = Time.now.strftime('%Y-%m-%d')
-    out = `git log $(git describe --tags --abbrev=0)...HEAD -E --grep '#[0-9]+' 2>/dev/null`
-    issues = out.scan(/((?:\S+\/\S+)?#\d+)/).flatten
-    if issues.count > 0
-      puts("printf \"Tagged release, #{date}\n\nReferences #{issues.uniq.sort.join(', ')}\" | git tag -a v#{version}")
-    else
-      puts("git tag -a v#{version} -m \"Tagged release, #{date}\"")
-    end
+  task :tag_message do
+    issues = `git log $(git describe --tags --abbrev=0)...HEAD -E --grep '#[0-9]+' 2>/dev/null`
+    issues = issues.scan(/((?:\S+\/\S+)?#\d+)/).flatten
+    msg = "Tag release v#{version}"
+    msg << "\n\nReferences:#{issues.uniq.sort.join(', ')}" unless issues.empty?
+    puts msg
   end
 
   task :push do
@@ -52,5 +51,5 @@ task :release => [
   'test',
   'changelog:version',
   'release:tag',
-  'release:push',
+  #'release:push',
 ]
