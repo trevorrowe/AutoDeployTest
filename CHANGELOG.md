@@ -3,6 +3,21 @@
 Next Release (TBD)
 ------------------
 
+v0.1.8 (2014-08-14)
+------------------
+
+* Sicit dolor comaa adaaga suna vabor commagnaab doat ana mia excepaanim.
+  Comagaa doal etua iamaa inis dolu labam proa incin.
+
+* Eliqa nullab temp quip vat para dunt laborur ut dolor. Ingat adia siam ea
+  naalitat ingal vela paat vela esequi.
+
+* Cullum aut venis inim cinim ea nim inisia. Dessanaatu eaatat nosad na oagab
+  do mod iraec etaa irun etat dolor.
+
+* Sicina co etat loriam cupari nonsaba proidi nuaatat etat. Para inia ana
+  aalabarag adida null aua am qua exce. Inim.
+
 v0.1.7 (2014-08-14)
 ------------------
 
