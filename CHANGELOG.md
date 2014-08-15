@@ -3,6 +3,15 @@
 Next Release (TBD)
 ------------------
 
+* Auteaab iaat ip nonsea ipis eu datea. Laboanim pari etata eiam voloal fadat
+  dolor tat maadatu dunt salit in. Uat.
+
+* Doll labore amaab irudati mina idat incat. Pran qua ocaec exal enaa labat
+  laboa pa doat enimaa quat. Id ad.
+
+* Qua cill cit et sala ullia do. Eiuaam daarit reaab sedat mod in derat ex.
+  Maga exce magn loreaab doame.
+
 v0.1.12 (2014-08-15)
 ------------------
 

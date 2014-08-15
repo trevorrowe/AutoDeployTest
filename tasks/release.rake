@@ -27,6 +27,7 @@ namespace :release do
     File.open(path, 'w') { |f| f.write(file) }
     sh("git add lib/auto_deploy_test/version.rb")
     sh("git commit -m \"$(rake release:tag_message)\"")
+    sh("git tag v#{version}")
   end
 
   task :tag_message do
@@ -51,5 +52,5 @@ task :release => [
   'test',
   'changelog:version',
   'release:tag',
-  #'release:push',
+  'release:push',
 ]
