@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+v0.1.13 (2014-08-15)
+------------------
+
 * Anim fabat noam mint veaam in esat ipida aniamaal ipaa eiatia lor vali.
   Utatur caatat eaatur moarat do exca varad.
 
