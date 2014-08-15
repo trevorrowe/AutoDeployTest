@@ -13,18 +13,6 @@ namespace :release do
     version
   end
 
-  task :changelog do
-    changelog = File.open('CHANGELOG.md', 'r', encoding: 'UTF-8') { |f| f.read }
-    changelog = changelog.lines
-    changelog = changelog[0..4] + [nil, nil, nil] + changelog[5..-1]
-    changelog[5] = "v#{version} (#{Time.now.strftime('%Y-%m-%d')})\n"
-    changelog[6] = '-' * (changelog[3].chars.count - 1) + "\n"
-    changelog[7] = "\n"
-    changelog = changelog.join
-    File.open('CHANGELOG.md', 'w', encoding: 'UTF-8') { |f| f.write(changelog) }
-    sh("git add CHANGELOG.md")
-  end
-
   task :tag do
     path = 'lib/auto_deploy_test/version.rb'
     file = File.read(path)
@@ -46,7 +34,7 @@ desc "Releases a new version"
 task :release => [
   'release:require_version',
   'test',
-  'release:changelog',
+  'changelog:version',
   'release:tag',
   'release:push',
 ]
