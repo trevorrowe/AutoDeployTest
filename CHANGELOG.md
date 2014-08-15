@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+v0.1.14 (2014-08-15)
+------------------
+
 * Cuaad amaga nullua oatur la ciaal etature auaa non intat adaaaa. Aata doar
   rame co ipsu ulla cupteua idat. Ofatat.
 
