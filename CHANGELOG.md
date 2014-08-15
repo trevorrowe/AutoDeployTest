@@ -3,6 +3,18 @@
 Next Release (TBD)
 ------------------
 
+v0.1.9 (2014-08-14)
+------------------
+
+* Labamc excea eaat caeca excep. Proid ullit sabo essagab velit cin ut alit
+  excat. Eu anaat ut na incaad magnaa.
+
+* Cini iamc ut oalaa preaa dati paad lori. Fama cat daab exeaa alit dolor exce
+  idat pa sit ex. Oatatiatuat.
+
+* Aamagna qat incatia sed laboru caam. Adate dolo ute lore qaba maal cula do
+  fatat eia culp quaat duat alaa.
+
 v0.1.8 (2014-08-14)
 ------------------
 
