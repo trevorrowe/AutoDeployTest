@@ -32,11 +32,10 @@ namespace :release do
     out = `git log $(git describe --tags --abbrev=0)...HEAD -E --grep '#[0-9]+' 2>/dev/null`
     issues = out.scan(/((?:\S+\/\S+)?#\d+)/).flatten
     if issues.count > 0
-      sh("git tag -a v#{version} -m \"(#{date})\n\nSee ...\"")
+      puts("git tag -a v#{version} -m \"Tagged release, #{date}\n\nReferences #{issues.uniq.sort.join(', ')}\"")
     else
-      sh("git tag -a v#{version} -m \"(#{date})\"")
+      puts("git tag -a v#{version} -m \"Tagged release, #{date}\"")
     end
-
   end
 
   task :push do
@@ -53,5 +52,5 @@ task :release => [
   'test',
   'changelog:version',
   'release:tag',
-  #'release:push',
+  'release:push',
 ]
