@@ -34,7 +34,20 @@ namespace :release do
     issues = `git log $(git describe --tags --abbrev=0)...HEAD -E --grep '#[0-9]+' 2>/dev/null`
     issues = issues.scan(/((?:\S+\/\S+)?#\d+)/).flatten
     msg = "Tag release v#{version}"
-    msg << "\n\nReferences:#{issues.uniq.sort.join(', ')}" unless issues.empty?
+    msg << "\n"
+    msg << "\nReferences:#{issues.uniq.sort.join(', ')}" unless issues.empty?
+    msg << "\n"
+
+    changelog = File.open('CHANGELOG.md', 'r', encoding: 'UTF-8') { |f| f.read }
+    lines = []
+    changelog.lines[8..-1].each do |line|
+      if line.match(/^v\d/)
+        break
+      else
+        lines << line
+      end
+    end
+    msg << lines[0..-2].join
     puts msg
   end
 
