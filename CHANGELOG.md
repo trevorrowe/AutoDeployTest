@@ -3,6 +3,12 @@
 Next Release (TBD)
 ------------------
 
+* Cuaad amaga nullua oatur la ciaal etature auaa non intat adaaaa. Aata doar
+  rame co ipsu ulla cupteua idat. Ofatat.
+
+* Ulpaa suat in ana comaa eu ia anim. In ulaa naaea et na anisa aat essa ingat
+  exer ut eu.
+
 v0.1.13 (2014-08-15)
 ------------------
 
