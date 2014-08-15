@@ -14,6 +14,7 @@ deploy:
     api_key:
       secure: nc2t9oY2+Fa3HHx/dm9sO9G3IwsUO+u0MfEdGBvkJyBpoQ7bTzim3huxWwCues3Mg99wXGytbRuWs8xKIaF4khBIkhRv0dNCGCy4bQH4fXKKjfYviv+DBcj4qbd6K6Ec9i4v7hV9Vj2WeEj1+Gl0OPVI1H2H521s2hHbZlAq0H0=
     on:
+      ruby: 2.1.2
       all_branches: true
       tags: true
 
@@ -23,6 +24,7 @@ deploy:
     api_key:
       secure: pqrstcdRYkVmOvj6BFSmPpKHqva/Njqmlk4GKXU4i5QJiGKtxaYO86usOKnw8wOq04rcy9dxSoQyUDfo7XtPItPSCzz44OSPGypZeFq070H7Qw0IEfOPXOKyvv5kMXOQga8PTYHOKNaT2xEN0jfLNhcDIEcDgnWglThyZQKIg6M=
     on:
+      ruby: 2.1.2
       repo: trevorrowe/AutoDeployTest
       all_branches: true
       tags: true
