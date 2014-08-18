@@ -26,19 +26,20 @@ namespace :release do
     file = file.gsub(/VERSION = '.+?'/, "VERSION = '#{version}'")
     File.open(path, 'w') { |f| f.write(file) }
     sh("git add lib/auto_deploy_test/version.rb")
-    sh("git commit -m \"$(rake release:tag_message)\"")
-    sh("git tag v#{version}")
+    sh("git commit -m \"Bumped version to v#{version}\"")
+    sh("git tag -a -m \"$(rake release:tag_message)\" v#{version}")
   end
 
   task :tag_message do
     issues = `git log $(git describe --tags --abbrev=0)...HEAD -E --grep '#[0-9]+' 2>/dev/null`
     issues = issues.scan(/((?:\S+\/\S+)?#\d+)/).flatten
     msg = "Tag release v#{version}"
+    msg << "\n\n"
     unless issues.empty?
-      msg << "\n\n"
       msg << "References:#{issues.uniq.sort.join(', ')}"
       msg << "\n\n"
     end
+    msg << `rake changelog:latest`
     puts msg
   end
 
