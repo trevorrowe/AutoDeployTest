@@ -31,4 +31,3 @@ deploy:
 
 after_deploy:
   - "rake changelog:latest"
-  - "echo 'done'"

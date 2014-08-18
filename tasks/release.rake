@@ -9,11 +9,11 @@ end
 
 namespace :release do
 
-  task :check_version do
+  task :require_version do
     version
   end
 
-  task :check_clean do
+  task :require_clean_workspace do
     unless `git diff --shortstat 2> /dev/null | tail -n1` == ''
       warn('workspace must be clean to release')
       exit(1)
@@ -34,20 +34,11 @@ namespace :release do
     issues = `git log $(git describe --tags --abbrev=0)...HEAD -E --grep '#[0-9]+' 2>/dev/null`
     issues = issues.scan(/((?:\S+\/\S+)?#\d+)/).flatten
     msg = "Tag release v#{version}"
-    msg << "\n"
-    msg << "\nReferences:#{issues.uniq.sort.join(', ')}" unless issues.empty?
-    msg << "\n"
-
-    changelog = File.open('CHANGELOG.md', 'r', encoding: 'UTF-8') { |f| f.read }
-    lines = []
-    changelog.lines[8..-1].each do |line|
-      if line.match(/^v\d/)
-        break
-      else
-        lines << line
-      end
+    unless issues.empty?
+      msg << "\n\n"
+      msg << "References:#{issues.uniq.sort.join(', ')}"
+      msg << "\n\n"
     end
-    msg << lines[0..-2].join
     puts msg
   end
 
@@ -60,8 +51,8 @@ end
 
 desc "Releases a new version"
 task :release => [
-  'release:check_version',
-  'release:check_clean',
+  'release:require_version',
+  'release:require_clean_workspace',
   'test',
   'changelog:version',
   'release:tag',

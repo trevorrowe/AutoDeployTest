@@ -2,7 +2,7 @@ namespace :changelog do
 
   desc "Adds a changelog entry."
   task :add do
-    entry = `lorem-ipsum --words 20`
+    entry = `lorem-ipsum --words #{rand(40) + 5}`
     entry = entry.gsub(/(.{1,76})(?: +|$)\n?|(.{76})/, "  \\1\\2\n")
     entry = "*" + entry[1..-1] + "\n"
     changelog = File.open('CHANGELOG.md', 'r') { |f| f.read }.lines
@@ -16,7 +16,7 @@ namespace :changelog do
     changelog = changelog.lines
     changelog = changelog[0..4] + [nil, nil, nil] + changelog[5..-1]
     changelog[5] = "v#{version} (#{Time.now.strftime('%Y-%m-%d')})\n"
-    changelog[6] = '-' * (changelog[3].chars.count - 1) + "\n"
+    changelog[6] = '-' * (changelog[5].chars.count) + "\n"
     changelog[7] = "\n"
     changelog = changelog.join
     File.open('CHANGELOG.md', 'w', encoding: 'UTF-8') { |f| f.write(changelog) }
