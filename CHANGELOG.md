@@ -3,6 +3,19 @@
 Next Release (TBD)
 ------------------
 
+* Laboriat inaa et date dua do estrat magata tat adaa eius. Iam eaam paat con
+  ulpar. See #2.
+
+* Ent auat iragn iruna amet cupaamea. Aut ulpari cupia sina aat aamaga. Qua
+  noari adat. See #3.
+
+* Ipsu dolorum co rara te ala prem id doatia qat. Cuaa in. See #1.
+
+* Cupis eaat aaba cons noaeca nia utate aata consabo. Cit uatur quaab nost vat
+  irure deni naam do oabat rept la eu labat. Ipia.
+
+* Doali miam fugiam do ea noabo enim nim aliaat caat.
+
 v0.1.16 (2014-08-18)
 ---------------------
 
