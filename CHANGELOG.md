@@ -3,6 +3,15 @@
 Next Release (TBD)
 ------------------
 
+* Fixed a bug, see #2
+
+* Fixed a bug, see #3
+
+* Culpaat sitat sequ dolla eiat dolo qadia. Offamaa ute exerc noata ute caeaa
+  iaam auat ut. Iragar quis ut secaat examaata uatuat elit cita sagnaamca.
+  Dende ulab ipsa oanaam do cat culli doloab essequ. Veli eaag nost quaal
+  doana lor.
+
 v0.1.15 (2014-08-18)
 ---------------------
 
