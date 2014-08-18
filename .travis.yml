@@ -29,5 +29,9 @@ deploy:
       all_branches: true
       tags: true
 
+before_deploy:
+  - "echo 'before'"
+
 after_deploy:
   - "rake changelog:latest"
+  - "echo 'after'"
