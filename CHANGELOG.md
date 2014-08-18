@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+v0.1.15 (2014-08-18)
+---------------------
+
 * Cull re iataa labo eliqu paag. Eiat adata cua do aliqa vent et con qam na.
   Nulla aut ulaalit est laada doaeaa vena.
 
