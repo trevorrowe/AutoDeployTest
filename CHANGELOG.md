@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+v0.1.17 (2014-08-18)
+---------------------
+
 * Laboriat inaa et date dua do estrat magata tat adaa eius. Iam eaam paat con
   ulpar. See #2.
 
