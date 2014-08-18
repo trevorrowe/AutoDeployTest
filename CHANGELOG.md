@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+v0.1.16 (2014-08-18)
+---------------------
+
 * Fixed a bug, see #2
 
 * Fixed a bug, see #3
