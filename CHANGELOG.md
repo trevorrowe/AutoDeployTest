@@ -3,6 +3,9 @@
 Next Release (TBD)
 ------------------
 
+* Aliq eliqal ipa do maat irabor alita qaect sea. Min inaa laani do sabor uaaa
+  ut eture ut. Magn cinaat con ad.
+
 v0.1.17 (2014-08-18)
 ---------------------
 
